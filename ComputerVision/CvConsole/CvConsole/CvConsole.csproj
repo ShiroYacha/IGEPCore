@@ -11,7 +11,8 @@
     <RootNamespace>CvConsole</RootNamespace>
     <AssemblyName>CvConsole</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,6 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MIConvexHullPlugin">
+      <HintPath>..\..\..\..\CodeSnip\miconvexhull_db6c1cb83edc\MIConvexHull\bin\Debug\MIConvexHullPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,34 +54,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NavigationControls\LogControl.cs">
+    <Compile Include="LocalControls\GraphicsDeviceControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LocalControls\GraphicsDeviceService.cs" />
+    <Compile Include="LocalControls\ModelViewerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\ContentBuilder.cs" />
+    <Compile Include="Models\ErrorLogger.cs" />
+    <Compile Include="Models\ServiceContainer.cs" />
+    <Compile Include="Models\VertexHelper.cs" />
+    <Compile Include="LocalControls\LogControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationControls\LogControl.Designer.cs">
+    <Compile Include="LocalControls\LogControl.Designer.cs">
       <DependentUpon>LogControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavigationControls\ModelsWindow.cs">
+    <Compile Include="NavigationWindows\ModelsWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationControls\ModelsWindow.Designer.cs">
+    <Compile Include="NavigationWindows\ModelsWindow.Designer.cs">
       <DependentUpon>ModelsWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavigationControls\MonitorsWindow.cs">
+    <Compile Include="NavigationWindows\MonitorsWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationControls\MonitorsWindow.Designer.cs">
+    <Compile Include="NavigationWindows\MonitorsWindow.Designer.cs">
       <DependentUpon>MonitorsWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavigationControls\SettingsWindow.cs">
+    <Compile Include="NavigationWindows\SettingsWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationControls\SettingsWindow.Designer.cs">
+    <Compile Include="NavigationWindows\SettingsWindow.Designer.cs">
       <DependentUpon>SettingsWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavigationControls\StartupWindow.cs">
+    <Compile Include="NavigationWindows\StartupWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationControls\StartupWindow.Designer.cs">
+    <Compile Include="NavigationWindows\StartupWindow.Designer.cs">
       <DependentUpon>StartupWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.cs">
@@ -90,19 +109,22 @@
       <DependentUpon>MainWindow.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\ResourceParser.cs" />
-    <EmbeddedResource Include="NavigationControls\LogControl.resx">
+    <EmbeddedResource Include="LocalControls\GraphicsDeviceControl.resx">
+      <DependentUpon>GraphicsDeviceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalControls\LogControl.resx">
       <DependentUpon>LogControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigationControls\ModelsWindow.resx">
+    <EmbeddedResource Include="NavigationWindows\ModelsWindow.resx">
       <DependentUpon>ModelsWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigationControls\MonitorsWindow.resx">
+    <EmbeddedResource Include="NavigationWindows\MonitorsWindow.resx">
       <DependentUpon>MonitorsWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigationControls\SettingsWindow.resx">
+    <EmbeddedResource Include="NavigationWindows\SettingsWindow.resx">
       <DependentUpon>SettingsWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigationControls\StartupWindow.resx">
+    <EmbeddedResource Include="NavigationWindows\StartupWindow.resx">
       <DependentUpon>StartupWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
@@ -122,6 +144,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MainWindow.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -134,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

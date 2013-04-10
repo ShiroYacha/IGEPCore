@@ -145,6 +145,7 @@
             // 
             // panel_MainContainer
             // 
+            this.panel_MainContainer.BackColor = System.Drawing.SystemColors.Control;
             this.panel_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_MainContainer.Location = new System.Drawing.Point(0, 32);
             this.panel_MainContainer.Name = "panel_MainContainer";
@@ -162,6 +163,7 @@
             this.Controls.Add(this.toolS_NavBar);
             this.Controls.Add(this.statusS_Status);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "MainWindow";
             this.Text = "Console";
             this.Load += new System.EventHandler(this.MainWindow_Load);
