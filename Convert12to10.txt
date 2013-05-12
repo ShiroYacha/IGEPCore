@@ -1,0 +1,4 @@
+Open you solution file in notepad. Make 2 changes
+ 1.Replace "Format Version 12.00" with "Format Version 11.00" (without quotes.)
+ 2.Replace "# Visual Studio 2012" with "# Visual Studio 2010" (without quotes.)
+

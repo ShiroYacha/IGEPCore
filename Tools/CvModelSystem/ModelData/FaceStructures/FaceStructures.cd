@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CvModelSystem.Structure.BasicFace">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAEAAAAAEAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelData\FaceStructures\BasicFace.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CvModelSystem.Structure.BasicColorFace">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <Members>
+      <Method Name="ConvertBgrToColor" Hidden="true" />
+      <Method Name="ConvertColorToHsv" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAIAAEACAAAAAAACAACAIAAAAAAAAgA=</HashCode>
+      <FileName>ModelData\FaceStructures\BasicColorFace.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="CvModelSystem.Structure.IColor">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAACAAAAAAACAACAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelData\FaceStructures\IColorFace.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

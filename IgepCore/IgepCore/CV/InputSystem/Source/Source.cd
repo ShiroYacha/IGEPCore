@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="IgepCore.CV.InputSystem.ImageSource&lt;TView&gt;">
+    <Position X="2.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAkAAAAIAAAEAAAAAQAAAgACAAI=</HashCode>
+      <FileName>CV\InputSystem\Source\ImageSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="IgepCore.CV.InputSystem.CameraSource&lt;TView&gt;">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAgAAAAIgAAEBAAAAUIAAgAAAAI=</HashCode>
+      <FileName>CV\InputSystem\Source\CameraSource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="IgepCore.CV.InputSystem.ISource&lt;TView&gt;">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAgAAAAIAAAEAAAAAQAAAAAAAAI=</HashCode>
+      <FileName>CV\InputSystem\Source\ISource.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="IgepCore.CV.InputSystem.OnUpdateViewEventHandler&lt;TView&gt;">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CV\InputSystem\Source\ISource.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

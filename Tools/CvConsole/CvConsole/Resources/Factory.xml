@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Factory>
+
+  <ConcretType type="EquiSphericalViewPointProvider">
+    <CtorAttributes>radius=10;nbPoints=1000</CtorAttributes>
+  </ConcretType>
+
+  <ConcretType type="DynamicViewPointProvider">
+    <CtorAttributes></CtorAttributes>
+  </ConcretType>
+
+  <ConcretType type="IModelDataGenerator">
+    <CtorAttributes></CtorAttributes>
+  </ConcretType>
+  
+</Factory>

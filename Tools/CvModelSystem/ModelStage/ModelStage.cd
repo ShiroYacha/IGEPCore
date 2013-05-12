@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CvModelSystem.BasicModelStage">
+    <Position X="4" Y="1" Width="2.5" />
+    <Members>
+      <Field Name="initStageStatus" Hidden="true" />
+      <Field Name="modelViewerControl" Hidden="true" />
+      <Field Name="stageModel" Hidden="true" />
+      <Field Name="stageStatus" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAABBAQAARAEAAAQAABAAAEAAAAAAA=</HashCode>
+      <FileName>ModelStage\BasicModelStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CvModelSystem.MovingModelStage">
+    <Position X="1.75" Y="5" Width="2.5" />
+    <Members>
+      <Field Name="dueTime" Hidden="true" />
+      <Field Name="isFinished" Hidden="true" />
+      <Field Name="isFirst" Hidden="true" />
+      <Field Name="isInitErrorRange" Hidden="true" />
+      <Field Name="millesecondsPerFrame" Hidden="true" />
+      <Method Name="StageCallBack" Hidden="true" />
+      <Field Name="stageTimer" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQAAhAAgAAQAAAAAABAAAAAAAAAgBAABgAAAAAQAAAA=</HashCode>
+      <FileName>ModelStage\MovingModelStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CvModelSystem.ControlableModelStage">
+    <Position X="6.25" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelStage\ControlableModelStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CvModelSystem.YawPitchRowRotatingModelStage">
+    <Position X="1.75" Y="8" Width="2.5" />
+    <Members>
+      <Field Name="pitchRotationPerFrame" Hidden="true" />
+      <Field Name="rowRotationPerFrame" Hidden="true" />
+      <Field Name="yawRotationPerFrame" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAAABAAAAAQAAAAAAAAABAAAAABAACAAAAAAEAAIAAA=</HashCode>
+      <FileName>ModelStage\YawPitchRowRotatingModelStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

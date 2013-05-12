@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B6002C8-3198-4E6C-8515-6A6E48242697}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CvModelSystem</RootNamespace>
+    <AssemblyName>CvModelSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV, Version=2.4.2.1777, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Libs\libemgucv-windows-x86-2.4.0.1717\bin\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.ML, Version=2.4.2.1777, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Libs\libemgucv-windows-x86-2.4.0.1717\bin\Emgu.CV.ML.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI, Version=2.4.2.1777, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Libs\libemgucv-windows-x86-2.4.0.1717\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.4.2.1777, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Libs\libemgucv-windows-x86-2.4.0.1717\bin\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="MIConvexHullPlugin">
+      <HintPath>..\..\..\CodeSnip\miconvexhull_db6c1cb83edc\MIConvexHull\bin\Debug\MIConvexHullPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ModelData2Generator\ConvexHullGenerator.cs" />
+    <Compile Include="ModelData2Generator\ModelData2Generator.cs" />
+    <Compile Include="ModelData2Projecter\DirectProjecter.cs" />
+    <Compile Include="ModelData2Projecter\ModelData2Projecter.cs" />
+    <Compile Include="ModelData3Extractor\ModelDataExtractor.cs" />
+    <Compile Include="ModelData3Extractor\VertexHelper.cs" />
+    <Compile Include="ModelData\BasicModelData\ModelDataList.cs" />
+    <Compile Include="ModelData\IGenerateTreeNode.cs" />
+    <Compile Include="ModelData\TreeListViewAdapter\ComponentDataAdapter.cs" />
+    <Compile Include="ModelData\TreeListViewAdapter\StructureAndAttributes.cs" />
+    <Compile Include="ModelStage\ControlableModelStage.cs" />
+    <Compile Include="Controls\ModelViewerControl\ContentBuilder.cs" />
+    <Compile Include="Controls\ModelViewerControl\ErrorLogger.cs" />
+    <Compile Include="Controls\ModelViewerControl\GraphicsDeviceControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ModelViewerControl\GraphicsDeviceService.cs" />
+    <Compile Include="Controls\ModelViewerControl\ModelViewerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ModelViewerControl\ServiceContainer.cs" />
+    <Compile Include="ModelData\ColorConvexHull2.cs" />
+    <Compile Include="ModelData\FaceStructures\BasicColorFace.cs" />
+    <Compile Include="ModelData\FaceStructures\IColorFace.cs" />
+    <Compile Include="ModelData\FaceStructures\BasicFace.cs" />
+    <Compile Include="ModelData\ColorModelData2.cs" />
+    <Compile Include="ModelData\BasicModelData\ModelData.cs" />
+    <Compile Include="ModelData\ColorModelData3.cs" />
+    <Compile Include="ModelStage\BasicModelStage.cs" />
+    <Compile Include="ModelStage\MovingModelStage.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Serialization.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ModelStage\YawPitchRowRotatingModelStage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ModelData\FaceStructures\FaceStructures.cd" />
+    <None Include="ModelData\ModelData.cd" />
+    <None Include="ModelStage\ModelStage.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ModelViewerControl\GraphicsDeviceControl.resx">
+      <DependentUpon>GraphicsDeviceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

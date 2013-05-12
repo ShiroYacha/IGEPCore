@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CvModelSystem.Structure.ModelData">
+    <Position X="3" Y="0.5" Width="2" />
+    <Members>
+      <Method Name="AppendToXmlFile" Hidden="true" />
+      <Field Name="description" Hidden="true" />
+      <Method Name="ModelData" Hidden="true" />
+      <Field Name="modelPath" Hidden="true" />
+      <Field Name="objectName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEIAAAJAAIAAAAQAAAAAAAIgAAAAA=</HashCode>
+      <FileName>ModelData\BasicModelData\ModelData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CvModelSystem.Structure.ColorModelData2">
+    <Position X="4.75" Y="4" Width="1.75" />
+    <Members>
+      <Field Name="faces" Hidden="true" />
+      <Field Name="vertices" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAAAAAAgAAAAAAAAAAAAAQQAAAEAAAAgAAAAA=</HashCode>
+      <FileName>ModelData\ColorModelData2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CvModelSystem.Structure.ColorModelData3">
+    <Position X="1.5" Y="4" Width="1.75" />
+    <Members>
+      <Field Name="faces" Hidden="true" />
+      <Field Name="vertices" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAAIAAAAAAAAAAAAAAAAAAAAAQQAAAEAAAAgAAAAA=</HashCode>
+      <FileName>ModelData\ColorModelData3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CvModelSystem.Structure.ColorConvexHull2">
+    <Position X="4.75" Y="6.75" Width="1.75" />
+    <InheritanceLine Type="CvModelSystem.Structure.ColorModelData2" FixedToPoint="true">
+      <Path>
+        <Point X="5.625" Y="6.261" />
+        <Point X="5.625" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelData\ColorConvexHull2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
